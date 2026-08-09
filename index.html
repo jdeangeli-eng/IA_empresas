@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificación Universitaria en IA para Optimizar Empresas | Mundos E & UNC</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            accent: '#6366f1',
+                            purple: '#a855f7',
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6'
+                        }
+                    },
+                    boxShadow: {
+                        'glow-emerald': '0 0 40px -10px rgba(34, 197, 94, 0.3)',
+                        'glow-indigo': '0 0 40px -10px rgba(99, 102, 241, 0.25)',
+                        'glow-cyan': '0 0 40px -10px rgba(6, 182, 212, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #060911;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-elevated {
+            background: rgba(20, 30, 50, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #38bdf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(52,211,153,0.5), rgba(99,102,241,0.3), rgba(255,255,255,0.05));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#060911] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+    <header class="sticky top-0 z-50 bg-[#060911]/85 backdrop-blur-xl border-b border-slate-800/80 transition-all duration-300" id="main-navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logos Header -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 font-bold text-lg sm:text-xl tracking-tight text-white">
+                    <span class="text-emerald-400 font-black text-2xl tracking-tighter">mundos</span><span class="bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950 px-2 py-0.5 rounded-lg text-sm font-black shadow-md shadow-emerald-500/20">E</span>
+                </div>
+                <div class="h-5 w-px bg-slate-800 hidden sm:block"></div>
+                <a href="http://fcefyn.unc.edu.ar/facultad/secretarias/extension/area-de-formacion-continua/aliados/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 text-xs text-slate-400 font-medium hover:text-emerald-300 transition-colors">
+                    <span class="px-2.5 py-1 rounded-md bg-slate-900 text-emerald-300 border border-emerald-500/20 font-semibold hover:border-emerald-400/50 transition-all">Aval Oficial FCEFyN - UNC</span>
+                </a>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <a href="#programa" class="hover:text-emerald-400 transition-colors">Programa</a>
+                <a href="#stacks" class="hover:text-emerald-400 transition-colors">Herramientas</a>
+                <a href="#beneficios" class="hover:text-emerald-400 transition-colors">Beneficios</a>
+                <a href="#cursado" class="hover:text-emerald-400 transition-colors">Modalidad</a>
+                <a href="#certificacion" class="hover:text-emerald-400 transition-colors">Certificado</a>
+                <a href="#asesor" class="hover:text-emerald-400 transition-colors">Asesor</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+5493516573170" class="hidden sm:inline-flex items-center justify-center p-2.5 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition-all" title="Llamar a Jorge De Angeli">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                </a>
+                <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20la%20Certificaci%C3%B3n%20Universitaria%20en%20Inteligencia%20Artificial%20para%20Optimizar%20Empresas" target="_blank" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 transition-all duration-200 group">
+                    <i class="fa-brands fa-whatsapp text-base mr-2 group-hover:scale-110 transition-transform"></i> 
+                    <span>Consultar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="programa" class="relative pt-12 pb-24 overflow-hidden bg-grid-pattern">
+        <!-- Glow accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Endorsement Pill -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold mb-8 shadow-xl backdrop-blur-md">
+                <i class="fa-solid fa-robot text-emerald-400"></i>
+                <span>CERTIFICACIÓN UNIVERSITARIA EXECUTIVE • ONLINE EN VIVO • UNC FCEFyN Y MUNDOS E</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-6">
+                Inteligencia Artificial para<br>
+                <span class="gradient-text">Optimizar Empresas</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-xl max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+                Transformá la Inteligencia Artificial en una <strong class="text-white font-semibold">capacidad de negocio transversal, segura y escalable</strong>. Aprendé a construir rieles tecnológicos y gobernanza para resolver cuellos de botella con los ecosistemas líderes: <strong class="text-emerald-300">Google Workspace (Gemini, AppSheet, Looker)</strong> y <strong class="text-sky-300">Microsoft 365 (Copilot, Power Apps, Power BI)</strong>.
+            </p>
+
+            <!-- Visual Gallery Banner -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
+                <div class="relative h-48 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="IA aplicada a procesos de negocio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-4">
+                        <span class="text-xs font-semibold text-emerald-300"><i class="fa-solid fa-brain mr-1.5"></i> IA como Capacidad Transversal</span>
+                    </div>
+                </div>
+                <div class="relative h-48 rounded-2xl overflow-hidden border border-emerald-500/30 group shadow-lg shadow-emerald-500/10">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Google Workspace y Microsoft Copilot Integracion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-4">
+                        <span class="text-xs font-semibold text-emerald-300"><i class="fa-solid fa-network-wired mr-1.5"></i> Google Workspace & MS 365</span>
+                    </div>
+                </div>
+                <div class="relative h-48 rounded-2xl overflow-hidden border border-slate-800 group shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Cuadros de mando y tableros Looker / PowerBI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-4">
+                        <span class="text-xs font-semibold text-emerald-300"><i class="fa-solid fa-chart-line mr-1.5"></i> Soluciones Cuantificables & BI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Specs Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-12">
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-emerald-500 hover:border-emerald-400 transition-all shadow-glow-emerald">
+                    <div class="text-emerald-400 font-black text-2xl sm:text-3xl">3 meses</div>
+                    <div class="text-slate-400 text-xs sm:text-sm font-medium mt-1">12 Encuentros en Vivo</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-sky-500 hover:border-sky-400 transition-all">
+                    <div class="text-sky-400 font-black text-2xl sm:text-3xl">50 horas</div>
+                    <div class="text-slate-400 text-xs sm:text-sm font-medium mt-1">Carga Horaria Certificada</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-indigo-500 hover:border-indigo-400 transition-all">
+                    <div class="text-indigo-400 font-black text-2xl sm:text-3xl">100% Práctico</div>
+                    <div class="text-slate-400 text-xs sm:text-sm font-medium mt-1">Proyecto Integrador Real</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center border-t-2 border-purple-500 hover:border-purple-400 transition-all">
+                    <div class="text-purple-400 font-black text-2xl sm:text-3xl">Dual Stack</div>
+                    <div class="text-slate-400 text-xs sm:text-sm font-medium mt-1">Google & Microsoft Suite</div>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/35 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                    <span>Agendar Asesoramiento Académico</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20solicitar%20el%20programa%20ejecutivo%20en%20PDF%20de%20la%20Certificaci%C3%B3n%20en%20IA%20para%20optimizar%20empresas" target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-pdf text-emerald-400"></i>
+                    <span>Descargar Programa en PDF</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="asesor" class="py-12 bg-slate-900/40 border-y border-slate-800/80 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-elevated p-6 sm:p-8 rounded-3xl relative overflow-hidden gradient-border">
+                <div class="grid lg:grid-cols-12 gap-6 items-center">
+                    
+                    <div class="lg:col-span-8 flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+                        <div class="relative shrink-0">
+                            <a href="https://www.linkedin.com/in/jorgedeangeli/" target="_blank" rel="noopener noreferrer" class="block group" title="Ver perfil de LinkedIn de Jorge De Angeli">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-emerald-500/10 border-2 border-emerald-400/60 group-hover:border-emerald-400 transition-all flex items-center justify-center text-emerald-300 text-2xl sm:text-3xl shadow-xl shadow-emerald-500/10">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                            </a>
+                            <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full border border-slate-950 uppercase tracking-wider">
+                                On-line
+                            </span>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-semibold mb-2 border border-emerald-500/20">
+                                <i class="fa-solid fa-user-check text-xs"></i> Asesor Especializado & Consultor Académico
+                            </div>
+                            <h3 class="text-2xl font-bold text-white tracking-tight flex items-center justify-center sm:justify-start gap-2">
+                                <span>Jorge De Angeli</span>
+                                <a href="https://www.linkedin.com/in/jorgedeangeli/" target="_blank" class="text-sky-400 hover:text-sky-300 transition-colors text-lg" title="Perfil de LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-300 font-medium mt-0.5 mb-2">
+                                Admisiones Académicas & Consultoría Directa • Mundos E | UNC FCEFyN
+                            </p>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-xl">
+                                <em>"Te asesoraré personalmente para analizar el nivel de digitalización de tu organización y explicarte cómo esta certificación universitaria te permitirá liderar la transformación con Inteligencia Artificial."</em>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 flex flex-col gap-2.5 w-full">
+                        <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20coordinar%20una%20consulta%20por%20la%20Certificaci%C3%B3n%20en%20IA%20para%20Optimizar%20Empresas" target="_blank" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 transition-all">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar sin Cargo por WhatsApp</span>
+                        </a>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="tel:+5493516573170" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-solid fa-phone text-emerald-400"></i>
+                                <span>Llamada Directa</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jorgedeangeli/" target="_blank" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                                <i class="fa-brands fa-linkedin text-sky-400"></i>
+                                <span>Perfil LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stacks" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase">Independencia de Plataforma</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Domina el Stack Dual Líder de Mercado</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3">Aprenderás a construir soluciones equivalentes en los dos principales entornos corporativos del mundo sin importar la infraestructura previa de tu empresa.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Google Stack Card -->
+                <div class="glass-card p-8 rounded-3xl border-emerald-500/30 hover:border-emerald-400 transition-all relative overflow-hidden flex flex-col justify-between shadow-glow-emerald">
+                    <div class="absolute top-0 right-0 bg-emerald-500/20 text-emerald-300 text-[11px] font-bold px-4 py-1.5 rounded-bl-xl border-l border-b border-emerald-500/30 uppercase tracking-wider">
+                        Ecosistema Google Workspace
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl font-bold mb-6">
+                            <i class="fa-brands fa-google"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Google AI Stack</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm mb-6">Integración fluida de asistentes, creadores de aplicaciones sin código y visualización analítica.</p>
+                        
+                        <ul class="space-y-4 text-xs sm:text-sm text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-sparkles"></i></div>
+                                <div>
+                                    <strong class="text-white block">Google Gemini</strong>
+                                    <span>Modelos de lenguaje avanzados para automatización de respuestas, análisis documental y redacción asistida.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                                <div>
+                                    <strong class="text-white block">AppSheet (No-Code)</strong>
+                                    <span>Desarrollo de aplicaciones móviles y web internas sin escribir código directamente desde tus datos.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-chart-pie"></i></div>
+                                <div>
+                                    <strong class="text-white block">Looker Studio</strong>
+                                    <span>Creación de tableros de control y reportes de gestión interactivos en tiempo real.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">
+                        <strong>Ideal para:</strong> Equipos que operan en Google Drive, Gmail y buscan soluciones ágiles no-code de rápida implementación.
+                    </div>
+                </div>
+
+                <!-- Microsoft Stack Card -->
+                <div class="glass-card p-8 rounded-3xl border-sky-500/30 hover:border-sky-400 transition-all relative overflow-hidden flex flex-col justify-between shadow-glow-cyan">
+                    <div class="absolute top-0 right-0 bg-sky-500/20 text-sky-300 text-[11px] font-bold px-4 py-1.5 rounded-bl-xl border-l border-b border-sky-500/30 uppercase tracking-wider">
+                        Ecosistema Microsoft 365
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/20 flex items-center justify-center text-sky-400 text-xl font-bold mb-6">
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Microsoft Power Suite</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm mb-6">Aprovechamiento integral del ecosistema corporativo de Microsoft con asistentes de IA.</p>
+                        
+                        <ul class="space-y-4 text-xs sm:text-sm text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-robot"></i></div>
+                                <div>
+                                    <strong class="text-white block">Microsoft 365 Copilot</strong>
+                                    <span>Copiloto inteligente integrado en Teams, Word, Excel y PowerPoint para potenciar la productividad.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-cubes"></i></div>
+                                <div>
+                                    <strong class="text-white block">Power Apps</strong>
+                                    <span>Creación de soluciones empresariales a medida para digitalizar procesos operativos complejos.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5"><i class="fa-solid fa-chart-column"></i></div>
+                                <div>
+                                    <strong class="text-white block">Power BI</strong>
+                                    <span>Business Intelligence corporativo para conectar fuentes masivas de información y tomar decisiones estratégicas.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl bg-sky-950/40 border border-sky-500/30 text-xs text-sky-200">
+                        <strong>Ideal para:</strong> Organizaciones corporativas con infraestructura de Microsoft Office 365 y requerimientos analíticos avanzados.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-slate-900/60 border-t border-slate-800 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left text -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase">Competencias Profesionales Clave</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6 leading-tight">
+                        ¿Por qué certificar tu capacidad en IA Empresarial?
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                        No se trata solo de probar chats de IA; esta certificación te brinda la capacidad de estructurar sistemas, políticas de seguridad y proyectos medibles que transforman la operativa de cualquier empresa.
+                    </p>
+                    
+                    <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 mb-8">
+                        <div class="flex items-center gap-3 font-semibold text-emerald-300 text-sm mb-1">
+                            <i class="fa-solid fa-graduation-cap text-lg"></i>
+                            <span>Respaldo Institucional UNC</span>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Certificado emitido conjuntamente por la Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de Córdoba (UNC) y la Escuela de Personas y Negocios Mundos E.
+                        </p>
+                    </div>
+
+                    <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20consultarte%20por%20aranceles%20y%20facilidades%20de%20pago%20de%20la%20Certificaci%C3%B3n%20en%20IA%20Empresarial" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 font-bold hover:text-emerald-300 transition-colors text-xs sm:text-sm">
+                        <span>Consultar formas de pago y bonificaciones</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Right cards grid -->
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+                    
+                    <div class="glass-card p-6 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all">
+                            <i class="fa-solid fa-arrows-to-eye"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Comprensión Estratégica</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Entendé el impacto real de la IA en la cadena de valor y trazá la hoja de ruta adecuada para su adopción.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-sky-500 group-hover:text-slate-950 transition-all">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Prompting Avanzado</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Dominá la ingeniería de instrucciones efectivas para obtener respuestas precisas, consistentes y seguras.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-indigo-500 group-hover:text-slate-950 transition-all">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Soluciones Cuantificables</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Identificá cuellos de botella operativos y proponé soluciones basadas en IA con ROI medible.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-purple-500 group-hover:text-slate-950 transition-all">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Gobernanza y Seguridad</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Construí los "rieles" de seguridad, privacidad de datos y ética empresarial para el uso seguro de la IA.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cursado" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase">Metodología de Aprendizaje</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">¿Cómo es el Cursado Online?</h2>
+                <p class="text-slate-400 text-sm mt-3">Diseñado para profesionales activos. Clases en vivo interactivas combinadas con práctica semanal en campus virtual.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">12 Encuentros en Vivo</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                        Clases online de 2 horas de duración vía Zoom. Abordaje teórico y práctico directo. En caso de inasistencia, quedan grabadas en la plataforma.
+                    </p>
+                    <span class="text-[11px] text-emerald-400 font-semibold"><i class="fa-solid fa-clock mr-1"></i> 24 hs de cursada sincrónica</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Plataforma Multimodal</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                        Acceso 24/7 a videos, lecturas complementarias, guías de práctica, actividades interactivas y tests de autoevaluación.
+                    </p>
+                    <span class="text-[11px] text-sky-400 font-semibold"><i class="fa-solid fa-book-open mr-1"></i> 2 a 4 hs semanales de profundización</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Proyecto Integrador Real</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                        Desarrollarás de forma transversal una solución de IA aplicable directamente a tu propia empresa o caso de estudio profesional.
+                    </p>
+                    <span class="text-[11px] text-purple-400 font-semibold"><i class="fa-solid fa-check-double mr-1"></i> Aplicación directa al negocio</span>
+                </div>
+
+            </div>
+
+            <!-- Timezone Box -->
+            <div class="glass-card p-6 rounded-2xl border border-emerald-500/30 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Horarios de Transmisión en Vivo</h4>
+                        <p class="text-xs text-slate-400">Encuentros semanales sincrónicos</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+                    <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-emerald-300">19:30 hs ARG/UY</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">18:30 hs CHI/PY</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">17:30 hs PE/COL/EC</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">16:30 hs CRI</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contenidos" class="py-24 bg-slate-900/60 border-t border-slate-800 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase">Estructura Curricular</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 leading-tight">Ejes de Formación del Programa</h2>
+                <p class="text-slate-400 text-sm mt-3">Recorrido temático diseñado para ir desde los principios de gobernanza estratégica hasta la implementación práctica de soluciones de IA no-code y analítica.</p>
+            </div>
+
+            <!-- Modules Accordion List -->
+            <div class="space-y-4" id="modules-container">
+                
+                <!-- Módulo 1 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(1)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                01
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">IA como Capacidad Empresarial & Estrategia</h3>
+                                <p class="text-slate-400 text-xs">Visión transversal, gobernanza y marcos de seguridad</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-1"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-1">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> La IA como capacidad competitiva transversal y escalable.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Definición de "rieles" tecnológicos, privacidad y gobernanza de datos.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Matriz de evaluación de madurez digital en la organización.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(2)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                02
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Prompting Avanzado & Ingeniería de Instrucciones</h3>
+                                <p class="text-slate-400 text-xs">Técnicas de comunicación efectiva con LLMs</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-2"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-2">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Estructuración de prompts: Contexto, Rol, Instrucción y Formato de Salida.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Prompting de pocos ejemplos (Few-Shot) y Cadena de Pensamiento (Chain-of-Thought).</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Automatización de tareas de análisis documental, síntesis y redacción ejecutiva.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 3 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(3)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                03
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Ecosistema Google: Gemini, AppSheet & Looker Studio</h3>
+                                <p class="text-slate-400 text-xs">Automatizaciones y soluciones sin código en Google Workspace</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-3"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-3">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Uso práctico de Gemini integrado en Docs, Sheets y Gmail.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Creación de aplicaciones móviles y web operativas en AppSheet.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Visualización de datos e indicadores con Looker Studio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 4 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(4)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                04
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Ecosistema Microsoft: Copilot, Power Apps & Power BI</h3>
+                                <p class="text-slate-400 text-xs">Integración corporativa de automatizaciones y analítica</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-4"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-4">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Asistentes inteligentes con Microsoft 365 Copilot.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Digitalización de formularios y flujos de trabajo en Power Apps.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Tableros de control ejecutivos y modelado de datos en Power BI.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 5 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(5)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                05
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Diagnóstico de Cuellos de Botella & Soluciones Cuantificables</h3>
+                                <p class="text-slate-400 text-xs">Medición de retorno de inversión e impacto de procesos</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-5"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-5">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Identificación de fricciones e ineficiencias operativas en la empresa.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Diseño de soluciones basadas en IA con estimación de tiempo y ahorro de costos.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Presentación de casos de negocio ante la dirección.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 6 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleModule(6)">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-black flex items-center justify-center text-sm shrink-0">
+                                06
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Proyecto Integrador Final & Presentación</h3>
+                                <p class="text-slate-400 text-xs">Implementación de un sistema de IA aplicable a la empresa</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300" id="icon-6"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden border-t border-slate-800/60 pt-4 text-xs sm:text-sm text-slate-300" id="content-6">
+                        <ul class="space-y-2.5 text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Desarrollo práctico acompañado por mentores y anfitriones.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Presentación del proyecto integrador ante pares y tribunal académico.</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Evaluación para certificación final y preparación para acto de colación.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="certificacion" class="py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border-2 border-emerald-500/30 relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-7">
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-bold mb-3 border border-emerald-500/20 uppercase tracking-wider">
+                            CERTIFICACIÓN UNIVERSITARIA EXECUTIVE
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                            Certificado en "Inteligencia Artificial como Capacidad Empresarial"
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                            Otorgado por la <strong>Facultad de Ciencias Exactas, Físicas y Naturales (FCEFyN)</strong> de la <strong>Universidad Nacional de Córdoba (UNC)</strong> en conjunto con la Escuela de Personas y Negocios <strong>Mundos E</strong>.
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 mb-8 text-xs text-slate-300">
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+                                <i class="fa-brands fa-linkedin text-sky-400 text-2xl"></i>
+                                <span>Sumalo directamente a tu perfil de LinkedIn y CV.</span>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3">
+                                <i class="fa-solid fa-award text-amber-400 text-2xl"></i>
+                                <span>Aval oficial de una de las universidades más antiguas de LatAm.</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20saber%20m%C3%A1s%20detalles%20sobre%20el%20certificado%20universitario%20UNC" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar Requisitos con Jorge De Angeli</span>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative p-6 rounded-2xl bg-slate-900 border border-emerald-500/40 text-center max-w-sm shadow-glow-emerald">
+                            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-1">UNC FCEFyN & Mundos E</h3>
+                            <p class="text-xs text-emerald-300 font-semibold mb-3">50 Horas Certificadas</p>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                "Acredita competencias prácticas para la adopción, diseño e implementación de soluciones de Inteligencia Artificial como capacidad transversal en empresas."
+                            </p>
+                            <div class="inline-block px-3 py-1 rounded-md bg-emerald-950 text-emerald-300 text-[10px] font-bold border border-emerald-500/30 uppercase">
+                                Respaldo Académico Universitario
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="empresas" class="py-20 relative overflow-hidden border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-emerald-400 tracking-widest uppercase">Respaldo e Impacto</span>
+                <h2 class="text-3xl font-extrabold text-white mt-1">Empresas que confían en nuestra formación</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-2">Potenciamos resultados en las compañías líderes de la región.</p>
+            </div>
+
+            <!-- Company badges grid -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-5xl mx-auto mb-16">
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Globant</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Mercado Libre</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Renault</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Naranja X</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Bancor</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Grupo Libertad</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">SanTex</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Lemon Cash</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Medifé</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Coca-Cola Andina</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Claro</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold hover:border-emerald-500/40 transition-colors">Apex BPO</span>
+            </div>
+
+            <!-- Metrics bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-emerald-400">21 Años</div>
+                    <div class="text-xs text-slate-400 mt-1">Transformando la Educación</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-sky-400">+15.000</div>
+                    <div class="text-xs text-slate-400 mt-1">Egresados en Latinoamérica</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-purple-400">9.5 / 10</div>
+                    <div class="text-xs text-slate-400 mt-1">Nivel de Satisfacción</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-amber-400">137 MIL</div>
+                    <div class="text-xs text-slate-400 mt-1">Comunidad Académica UNC</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border-2 border-emerald-500/40 shadow-glow-emerald">
+                
+                <div class="text-center mb-10">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-bold mb-3 border border-emerald-500/20 uppercase tracking-wider">
+                        ADMISIONES DIRECTAS Y CONSULTAS ACADÉMICAS
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Iniciá tu Consulta con Jorge De Angeli</h2>
+                    <p class="text-slate-300 text-sm mt-3 max-w-xl mx-auto leading-relaxed">
+                        Completá el formulario para recibir de inmediato el plan de estudios en PDF, aranceles vigentes y asesoramiento personalizado de nuestro <strong>Consultor Académico</strong>.
+                    </p>
+                </div>
+
+                <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Nombre Completo *</label>
+                            <input type="text" id="user-name" required placeholder="Ej. Valeria Rossi" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Empresa / Organización</label>
+                            <input type="text" id="user-company" placeholder="Ej. Tech Solutions" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Correo Electrónico *</label>
+                            <input type="email" id="user-email" required placeholder="nombre@empresa.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="user-phone" required placeholder="+54 9 351..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">¿Cuál es tu objetivo principal con la Inteligencia Artificial?</label>
+                        <select id="user-challenge" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                            <option value="Optimizar procesos y automatizar cuellos de botella en mi empresa">Optimizar procesos y automatizar cuellos de botella en mi empresa</option>
+                            <option value="Aprender el ecosistema de Google Workspace (Gemini, AppSheet, Looker)">Aprender el ecosistema de Google Workspace (Gemini, AppSheet, Looker)</option>
+                            <option value="Aprender el ecosistema de Microsoft 365 (Copilot, Power Apps, Power BI)">Aprender el ecosistema de Microsoft 365 (Copilot, Power Apps, Power BI)</option>
+                            <option value="Obtener la certificación universitaria oficial UNC y mejorar mi CV">Obtener la certificación universitaria oficial UNC y mejorar mi CV</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Enviar Consulta Directa a Jorge De Angeli por WhatsApp</span>
+                    </button>
+                </form>
+
+                <!-- Confirmation Box -->
+                <div id="form-success" class="hidden text-center py-8">
+                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">¡Solicitud Registrada!</h3>
+                    <p class="text-slate-300 text-sm mb-6">Te estamos redirigiendo al WhatsApp de **Jorge De Angeli (+54 9 351 657-3170)** para enviarte el programa en PDF y responder tus preguntas...</p>
+                    <a id="wa-redirect-btn" href="#" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Chatear con Jorge Ahora</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#04060c] border-t border-slate-800 py-12 text-slate-400 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-4">
+                <div class="font-bold text-white text-lg tracking-tight">
+                    <span class="text-emerald-400">mundos</span>E
+                </div>
+                <div class="h-4 w-px bg-slate-800"></div>
+                <div class="text-slate-400 font-medium">
+                    UNC • FCEFyN
+                </div>
+            </div>
+
+            <div class="text-center md:text-right text-slate-400 space-y-1">
+                <p class="font-semibold text-slate-200">Asesor Especializado & Admisiones: Jorge De Angeli (+54 9 351 657-3170)</p>
+                <p>Certificación Universitaria en IA para Optimizar Empresas (3 meses - Online en Vivo - 50 hs totales).</p>
+                <p class="pt-1">
+                    <a href="https://www.mundose.com" target="_blank" class="text-emerald-400 hover:underline">mundose.com</a> • 
+                    <a href="https://www.linkedin.com/in/jorgedeangeli/" target="_blank" class="text-sky-400 hover:underline">LinkedIn Jorge De Angeli</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493516573170?text=Hola%20Jorge%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20la%20Certificaci%C3%B3n%20Universitaria%20en%20IA%20para%20Optimizar%20Empresas" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-200 shadow-emerald-500/40" title="Consultar directamente con Jorge De Angeli">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function toggleModule(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('lead-form');
+            const successBox = document.getElementById('form-success');
+            
+            const name = document.getElementById('user-name').value;
+            const company = document.getElementById('user-company').value;
+            const challenge = document.getElementById('user-challenge').value;
+            
+            // Build pre-filled WhatsApp message specifically tailored for Jorge
+            const waText = encodeURIComponent(
+                `¡Hola Jorge! Mi nombre es ${name}${company ? ' de ' + company : ''}. Quisiera solicitar el programa en PDF y asesoramiento sobre la Certificación Universitaria en IA para Optimizar Empresas (Mundos E / UNC FCEFyN).\n\n` +
+                `Mi objetivo principal: ${challenge}`
+            );
+            
+            const waUrl = `https://wa.me/5493516573170?text=${waText}`;
+            
+            document.getElementById('wa-redirect-btn').href = waUrl;
+            
+            form.classList.add('hidden');
+            successBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
